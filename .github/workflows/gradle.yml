@@ -54,6 +54,19 @@ jobs:
         build-args: SKIP_TESTS=true
 
 
+    - name: Deploy to Instance
+      uses: appleboy/ssh-action@v1.0.0     #가장 최신 버젼 appleboy 사용
+      with:
+        host: ${{secrets.GCP_HOST}}
+        username: ${{secrets.GCP_USERNAME}}
+        key: ${{secrets.GCP_PRIVATEKEY}}  
+        script: |
+          sudo docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          sudo docker pull ${{secrets.DOCKER_USERNAME}}/vetvision
+          sudo docker rm -f $(docker ps -qa) 2>/dev/null || true
+          sudo docker-compose up -d
+          sudo docker image prune -f
+
 
 
         
