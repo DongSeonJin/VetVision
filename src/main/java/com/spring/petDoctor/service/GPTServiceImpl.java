@@ -27,12 +27,7 @@ public class GPTServiceImpl implements GPTService{
     private final static String ASSISTANT_ID = "asst_9sZSXMHcaGeNCHvYvRSRbk41";
 
     @Autowired
-    private final GPTConf gptConf;
-
-    public GPTServiceImpl(GPTConf gptConf) {
-        this.gptConf = gptConf;
-    }
-
+    private GPTConf gptConf;
 
 
 
