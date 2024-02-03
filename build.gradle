@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.2'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'war'
 }
 
 group = 'com.spring'
@@ -28,7 +29,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.16.1'
 	implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.0'
-	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.5'
 
 
