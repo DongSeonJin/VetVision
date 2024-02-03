@@ -29,8 +29,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.16.1'
 	implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.0'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	compileOnly 'org.springframework.boot:spring-boot-starter-tomcat'
+	compileOnly 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.5'
 
 
