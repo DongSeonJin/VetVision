@@ -87,7 +87,6 @@ public class GPTServiceImpl implements GPTService{
     @Override
     public String imageAnalysis(String image, String question) throws URISyntaxException, IOException, InterruptedException {
         String apiKey = gptConf.getApiKey();
-        System.out.println("apikey : " + apiKey);
         Map<String, Object> requestBody = new HashMap<>();
         ObjectMapper mapper = new ObjectMapper();
 

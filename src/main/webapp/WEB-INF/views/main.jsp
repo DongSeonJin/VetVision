@@ -68,14 +68,11 @@ document.getElementById('analyse-button').addEventListener('click', function() {
     var imageUrl = document.getElementById('file-image').src;
     var inputText = document.getElementById('resizer').value;
 
-    if (imageUrl === 'http://localhost:8080/#'){
-        imageUrl = null
-    };
+    imageUrl = imageUrl.includes('base64') ? imageUrl : null;
      
-    
 
     // 서버로 데이터 전송
-    fetch('http://localhost:8080/vet', { 
+    fetch('/vet', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
