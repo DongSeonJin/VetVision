@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="resources/static/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetVision-AI-Vet</title>
+    <title>VetVision-AI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -39,7 +39,7 @@
 
   </div>
   <div class="text-container" id="container">
-    <input type="text" id="resizer" class="input-box" placeholder="건강상태 설명 기입(필수X, 사진만O)">
+    <input type="text" id="resizer" class="input-box" placeholder="예: 강아지의 피부가 붉어(필수X, 사진만O)">
     <div>
       <button class="bubbly-button" id="analyse-button">분석시작</button>
     </div>
@@ -62,13 +62,18 @@
 
 // 분석시작 버튼 이벤트
 document.getElementById('analyse-button').addEventListener('click', function() {
-    // 오버레이와 로더 표시
-    document.querySelector('.overlay').style.display = 'flex'; // flex로 설정하여 로더를 중앙에 위치시킵니다.
     // 데이터 수집
     var imageUrl = document.getElementById('file-image').src;
     var inputText = document.getElementById('resizer').value;
 
     imageUrl = imageUrl.includes('base64') ? imageUrl : null;
+
+    if(imageUrl === null && inputText === '') {
+        alert('이미지를 업로드하거나 텍스트를 입력해주세요.');
+        return;
+    }
+    // 오버레이와 로더 표시
+    document.querySelector('.overlay').style.display = 'flex'; // flex로 설정하여 로더를 중앙에 위치시킵니다.
      
 
     // 서버로 데이터 전송
