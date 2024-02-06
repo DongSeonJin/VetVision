@@ -10,9 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+  <!-- <nav class="navbar" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">
+    <img src="https://dongjas-images.s3.ap-northeast-2.amazonaws.com/gpts-profile.png" alt="Logo" width="60" height="60">
+    VetVision
+    </a>
+  </nav> -->
+  
   <div class="upload-container" id="upload-container">
   
-    <h2>AI pet health care</h2>
+    <h2 class="title">AI pet health care</h2>
     <p class="lead">이미지 기반 반려동물 건강 분석</p>
     
     <!-- Upload  -->

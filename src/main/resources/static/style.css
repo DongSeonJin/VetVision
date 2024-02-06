@@ -1,23 +1,40 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-html, body, * {
+
+*, *::before, *::after {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
-html, body {
-  height: 100%;
-  text-align: center;
+
+@media (max-width: 1000px) {
+  .input-box, .form-control {
+    width: auto;
+    height: auto;
+  }
+
+  .uploader, .bubbly-button {
+    width: auto;
+    margin: 20px 10px;
+  }
+
+  .text-container, .upload-container {
+    padding: 0 15px;
+  }
+
+  h2, p {
+    font-size: smaller;
+  }
 }
+
 
 body {
-  padding: 3rem;
   background-image: url(https://i.imgur.com/iWUM6.jpg);
   width: 100%;
   background-size: fit;
 }
 
 h2 {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 26px;
   line-height: 1;
@@ -26,6 +43,7 @@ h2 {
 }
 
 p {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #5f6982;
@@ -35,7 +53,7 @@ p {
   display: block;
   clear: both;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   max-width: 600px;
 }
 .uploader label {
@@ -163,14 +181,12 @@ p {
 }
 .upload-container {
   height: 40vh; /* 컨테이너의 높이 설정 */
-  width: 100%; /* 컨테이너의 너비 설정 */
+  max-width: 100%; /* 컨테이너의 너비 설정 */
   margin: auto;
 }
-.text-container {
-  width: 50%;
+/* .text-container {
   margin: auto;
-  padding: 10px;
-}
+} */
 
 /* input 텍스트박스 */
 .input-box {
@@ -178,7 +194,9 @@ p {
   margin-top: 10px;
 }
 input[type='text']{
-  width: 80%;
+  display: block; /* 블록 레벨 요소로 변경 */
+  margin: 0 auto; /* 수평 가운데 정렬을 위한 마진 설정 */
+  width: 100%;
   color: #333;
   padding: 10px; /* 내부 패딩 */
   transition: box-shadow 320ms;
@@ -187,12 +205,7 @@ input[type='text']{
   font-size: 18px;
   border: 0px;
 }
-/* 창의 너비가 1200px 미만일 때 */
-@media (max-width: 1200px) {
-  input[type='text'] {
-    width: 80%;
-  }
-}
+
 input[type='text']:focus {
   outline: 0px;
   outline-offset: 0px;
@@ -202,14 +215,20 @@ input:-moz-placeholder {
   color: #cccccc;
 }
 /* 결과 박스 */
+.text-container {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
 .form-label {
   margin-top: 30px;
 }
 
 /* 버블 버튼 */
 .bubbly-button {
+  margin: 0 auto; /* 수평 가운데 정렬을 위한 마진 설정 */
   font-family: "Helvetica", "Arial", sans-serif;
-  display: inline-block;
+  display: block;
   font-size: 1em;
   padding: 1em 2em;
   margin-top: 30px;
