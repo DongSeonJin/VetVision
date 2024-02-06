@@ -16,6 +16,7 @@
     VetVision
     </a>
   </nav> -->
+  <img src="https://dongjas-images.s3.ap-northeast-2.amazonaws.com/gpts-profile.png" alt="Logo" width="60" height="60">
   
   <div class="upload-container" id="upload-container">
   
