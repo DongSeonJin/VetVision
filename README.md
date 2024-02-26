@@ -5,5 +5,4 @@
 [vetvision](https://www.vetvision.site)
 
 ## 📺 미리보기
-![스크린샷 2024-02-05 111513](https://github.com/DongSeonJin/VetVision/assets/129161266/676764c6-2c48-430a-9af5-1a725713d863)
-
+![스크린샷 2024-02-27 013522](https://github.com/DongSeonJin/VetVision/assets/129161266/5dcf5507-0e5c-4b99-9de7-0e2e2822f7f7)
